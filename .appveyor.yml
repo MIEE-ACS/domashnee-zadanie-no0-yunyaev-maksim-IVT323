@@ -1,0 +1,7 @@
+image: Ubuntu
+
+test_script:
+- if [[   -f "Удали меня.txt" ]]; then exit 2 ; fi
+- if [[ ! -f "Новый файл.txt" ]]; then exit 3 ; fi
+- if [[ "`head Обо\ мне.txt -n 1`" == "Иванов Сидор Петрович" ]]; then exit 4 ; fi
+build: off
